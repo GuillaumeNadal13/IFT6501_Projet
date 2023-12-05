@@ -26,7 +26,7 @@ forward propagation -- back propagation
 
         inputs are multiplied to the weights and the value is given to the hidden layer's neurone
         each neurone is associated with a numerical value called bias which is added to the input sum
-        the input sum passes throught the activation function which decides if 1 or 0
+        the input sum passes through the activation function which decides if 1 or 0
 
 
     Important terminologie:
