@@ -30,12 +30,18 @@ forward propagation -- back propagation
 
 
     Important terminologie:
-        weight : tells how important is that neuron
+        weight : tells how important is that neuron -- higher value = more important
 
-        bias : allows for the shifting of ? to the right or left
-
-
-
+        bias : allows for the shifting of the activation function to the right or left
+            is like the neurone having a opinion to the relationship (serves to shift the activation function to the
+            right or to the left (0 or 1)
 
 2- back propagation
+    Output layer to Hidden layers
+        ** is what makes the algorythm learn
+        the neural network evaluates is owe performance and checks if its right or wrong
+            # if wrong the neural network uses the Loss function to quantify the deviation from the expected output
+            # that information is sent back to the hidden layers so that the weights and biais are ajusted
+                # so that network accuracy increases
+
 
