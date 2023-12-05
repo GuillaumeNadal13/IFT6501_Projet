@@ -111,8 +111,13 @@ Optimizers :
         1-calculates what small changes in each weight would do to the lost function
         2-adjust each parameter based on its gradient (determined direction)
 
-        can end up finding a local miminum and getting stuck there
+        can end up finding a local minimum and getting stuck there
             - use proper Learning Rate
 Learning Rate :
     too large learning rate - will overshoot the global minimum
     too small - take forever to converge to the global minimum
+
+    Optimizers:
+        Adagrad
+        RMSprop
+        Adam
