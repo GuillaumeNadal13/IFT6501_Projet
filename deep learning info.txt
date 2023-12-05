@@ -52,4 +52,36 @@ Learning algorithm :
     5- Updates parameters based on the loss (so that total loss is reduced and a better model is obtained
     6- Iterate previous steps till loss is minimized
 
-Activation Function
+Activation Function :
+    It introduces a non-linearity in the network and decides whether a neuron can contribute to the next layer or not
+
+    1- Step function:
+        if value greater than a certain value it activates, if not doesn't activate
+        is a binary function
+        doesnt work if you need to sort inputs through multiple classes (exemple)
+    2 - Linear function
+        cannot have multiple layers, cause derivative of y = mx+b is a constant m
+    3- Sigmoid function
+        the output is going to be in the range of (0, 1)
+        non-linear so allows multiple layers
+        gives analog outputs (not 0 and 1)
+        vanishing gradient problem
+    4- Tanh function
+        can stack layers
+        range(0, 1)
+        vanishing problem
+    5- Relu function
+        non-linear, so can stack layers
+        outputs 0 if negative value; so almost half of all the neurones will be activated (network lighter)
+        range of (0, infinite) -- it could blow up the activation
+        for the negative values gradient = 0; so during backpropagation the weights won't be adjusted; all neurone is
+        zero state will stop responding to error ; called: dying relu problem (makes a part of the network passive
+        instead of activate(what we want)
+    6- Leaky Relu function
+            gradient not 0; but is still less computationally intensive then tanh and sigmoid
+
+Which to use :
+    binary classification problem: sigmoid
+    unsure : ReLU
+
+Loss function :
