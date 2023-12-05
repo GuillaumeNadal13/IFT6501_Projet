@@ -9,7 +9,7 @@ will have an idea of the pattern of the lines (lines and edges*) and shapes of a
 
 - deep learning requires big data
 - deep learning requires improved hardware architectures
-- deep learning (new softwares) - tensorflow + pytorch
+- deep learning (new software) - tensorflow + pytorch
 
 - the BASE of deep learning is Neural Networks
 - the basics of the neural network is that it
@@ -44,4 +44,12 @@ forward propagation -- back propagation
             # that information is sent back to the hidden layers so that the weights and biais are ajusted
                 # so that network accuracy increases
 
+Learning algorithm :
+    1- Initialize parameters with random values
+    2- Feed input data to network
+    3- Compared predicted value with expected; then calculates the loss
+    4- Perform backpropagation to propagate the loss back through the network
+    5- Updates parameters based on the loss (so that total loss is reduced and a better model is obtained
+    6- Iterate previous steps till loss is minimized
 
+Activation Function
