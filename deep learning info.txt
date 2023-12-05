@@ -1,0 +1,41 @@
+Deep leaning
+- uses ?? to recognize certain pattern machine learning algorithms cant (machine learning would need to be programmed
+to recognize patterns (shapes) to tell them appart/ like what is a face, what are eyes etc..
+- uses neural networks to process data directly
+- the source of many different advancements (playing chest, go, other games beating humans, self driving cars,
+recognizes spam emails)
+- in deep learning you can learn features from just the raw data (feed a bunch of images to the model) then the model
+will have an idea of the pattern of the lines (lines and edges*) and shapes of a face for example
+
+- deep learning requires big data
+- deep learning requires improved hardware architectures
+- deep learning (new softwares) - tensorflow + pytorch
+
+- the BASE of deep learning is Neural Networks
+- the basics of the neural network is that it
+    1- take the data as input
+    2- train itself to understand the pattern in the data
+    3- outputs useful predictions
+
+    Input layer -- Hidden layers -- Output layer
+
+forward propagation -- back propagation
+1- forward propagation
+    Input layer to Output layer
+        inputs uses channels to between neurones and each channel have weights
+
+        inputs are multiplied to the weights and the value is given to the hidden layer's neurone
+        each neurone is associated with a numerical value called bias which is added to the input sum
+        the input sum passes throught the activation function which decides if 1 or 0
+
+
+    Important terminologie:
+        weight : tells how important is that neuron
+
+        bias : allows for the shifting of ? to the right or left
+
+
+
+
+2- back propagation
+
