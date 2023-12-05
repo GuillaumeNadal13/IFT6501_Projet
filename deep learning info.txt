@@ -156,4 +156,32 @@ Supervised learning :
 
     2- regression
         Model attempts to find relationship between dependant and independent variables
-            to predict continuous values such as Test scores
+            to predict continuous values such as Test scores, sales
+
+        1-liner regression
+        2-lasso regression
+        3- multivariate regression
+
+    Bioinformatics
+    Object recognition
+    speech recognition
+    spam detection
+
+Unsupervised Learning :
+    used in exploratory data analysis ?
+    finds patterns that may not be noticeable by humans
+    1- Clustering
+        precess of grouping data in different clusters or groups : to predict continuous valeurs
+
+        1- Partition clustering
+
+        2- Hierarchical clustering
+
+    2-Association
+        attempts to find relationships between different entities
+
+        examples : airbnb, amazon, credit card fraud detection
+Reinforcement learning
+    agent learns in interactive environment by trail and error based on feedback from its own actions and experiences
+    uses rewards and punishments (+ or - behaviour)
+    maximize the total cumulative rewards
