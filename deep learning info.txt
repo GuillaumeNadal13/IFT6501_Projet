@@ -121,3 +121,39 @@ Learning Rate :
         Adagrad
         RMSprop
         Adam
+Parameters and Hyperparameters
+
+Model Parameters :
+    variables internal to the neural network
+    value can be estimated right from the data
+    examples : weights and bias
+Model Hyperparameters:
+    cannot be estimated right from data
+    configurations external to neural network
+    are specified manually
+    examples : learning rate, c in sigma
+
+Epochs, batches, batch sizes, iterations
+     when dataset is too large : break down df into smaller chunks and feed these chunks one by one to neural network
+
+    epoch :
+        entire dataset is passed forward and backward through the neural network once
+    batch and batch size:
+        number of batches = number of iterations for one epoch
+
+Supervised learning :
+    Models are trained on well-labelled data
+    predict the correct label for unseen data
+    1- classification
+        assign input and assign to a class/category
+        models find features in the data that correlate to a class and create a mapping function
+        model uses mapping function to classify unseen data
+
+        1-Linear classifers
+        2-SVM
+        3-K-nearest neighbour
+        4-random forest
+
+    2- regression
+        Model attempts to find relationship between dependant and independent variables
+            to predict continuous values such as Test scores
