@@ -1,0 +1,315 @@
+Deep leaning
+- uses ?? to recognize certain pattern machine learning algorithms cant (machine learning would need to be programmed
+to recognize patterns (shapes) to tell them appart/ like what is a face, what are eyes etc..
+- uses neural networks to process data directly
+- the source of many different advancements (playing chest, go, other games beating humans, self driving cars,
+recognizes spam emails)
+- in deep learning you can learn features from just the raw data (feed a bunch of images to the model) then the model
+will have an idea of the pattern of the lines (lines and edges*) and shapes of a face for example
+
+- deep learning requires big data
+- deep learning requires improved hardware architectures
+- deep learning (new software) - tensorflow + pytorch
+
+- the BASE of deep learning is Neural Networks
+- the basics of the neural network is that it
+    1- take the data as input
+    2- train itself to understand the pattern in the data
+    3- outputs useful predictions
+
+    Input layer -- Hidden layers -- Output layer
+
+forward propagation -- back propagation
+1- forward propagation
+    Input layer to Output layer
+        inputs uses channels to between neurones and each channel have weights
+
+        inputs are multiplied to the weights and the value is given to the hidden layer's neurone
+        each neurone is associated with a numerical value called bias which is added to the input sum
+        the input sum passes through the activation function which decides if 1 or 0
+
+
+    Important terminologie:
+        weight : tells how important is that neuron -- higher value = more important
+
+        bias : allows for the shifting of the activation function to the right or left
+            is like the neurone having a opinion to the relationship (serves to shift the activation function to the
+            right or to the left (0 or 1)
+
+2- back propagation
+    Output layer to Hidden layers
+        ** is what makes the algorythm learn
+        the neural network evaluates is owe performance and checks if its right or wrong
+            # if wrong the neural network uses the Loss function to quantify the deviation from the expected output
+            # that information is sent back to the hidden layers so that the weights and biais are ajusted
+                # so that network accuracy increases
+
+Learning algorithm :
+    1- Initialize parameters with random values
+    2- Feed input data to network
+    3- Compared predicted value with expected; then calculates the loss
+    4- Perform backpropagation to propagate the loss back through the network
+    5- Updates parameters based on the loss (so that total loss is reduced and a better model is obtained
+    6- Iterate previous steps till loss is minimized
+
+Activation Function :
+    It introduces a non-linearity in the network and decides whether a neuron can contribute to the next layer or not
+
+    1- Step function:
+        if value greater than a certain value it activates, if not doesn't activate
+        is a binary function
+        doesnt work if you need to sort inputs through multiple classes (exemple)
+    2 - Linear function
+        cannot have multiple layers, cause derivative of y = mx+b is a constant m
+    3- Sigmoid function
+        the output is going to be in the range of (0, 1)
+        non-linear so allows multiple layers
+        gives analog outputs (not 0 and 1)
+        vanishing gradient problem
+    4- Tanh function
+        can stack layers
+        range(0, 1)
+        vanishing problem
+    5- Relu function
+        non-linear, so can stack layers
+        outputs 0 if negative value; so almost half of all the neurones will be activated (network lighter)
+        range of (0, infinite) -- it could blow up the activation
+        for the negative values gradient = 0; so during backpropagation the weights won't be adjusted; all neurone is
+        zero state will stop responding to error ; called: dying relu problem (makes a part of the network passive
+        instead of activate(what we want)
+    6- Leaky Relu function
+            gradient not 0; but is still less computationally intensive then tanh and sigmoid
+
+Which to use :
+    binary classification problem: sigmoid
+    unsure : ReLU
+
+Loss function :
+    Quantify the deviation of the predicted output by the neural network to the expected output
+    different types of loss function :
+        1- regression
+            1-squared Error
+            2-Huber Loss
+        2- binary classification
+            1-binary cross-entropy
+            2-hinge loss
+        3-multi-class classification
+            1-multi-class cross entropy
+            2-kullback divergence
+
+during training, we adjust the parameters to minimize the loss function and make our model as optimized as possible
+
+Optimizers :
+    tie together the loss function and model parameters by updating the network based on the output of the loss function
+
+    loss function guides the optimizer
+
+    Gradient Descent :
+        Iterative algorithm that starts off at a random point on the loss function and travels down its slope in steps
+        until it reaches the lowest point (minimum) of the function
+        #popular optimizer
+        1-calculates what small changes in each weight would do to the lost function
+        2-adjust each parameter based on its gradient (determined direction)
+
+        can end up finding a local minimum and getting stuck there
+            - use proper Learning Rate
+Learning Rate :
+    too large learning rate - will overshoot the global minimum
+    too small - take forever to converge to the global minimum
+
+    Optimizers:
+        Adagrad
+        RMSprop
+        Adam
+Parameters and Hyperparameters
+
+Model Parameters :
+    variables internal to the neural network
+    value can be estimated right from the data
+    examples : weights and bias
+Model Hyperparameters:
+    cannot be estimated right from data
+    configurations external to neural network
+    are specified manually
+    examples : learning rate, c in sigma
+
+Epochs, batches, batch sizes, iterations
+     when dataset is too large : break down df into smaller chunks and feed these chunks one by one to neural network
+
+    epoch :
+        entire dataset is passed forward and backward through the neural network once
+    batch and batch size:
+        number of batches = number of iterations for one epoch
+
+Supervised learning :
+    Models are trained on well-labelled data
+    predict the correct label for unseen data
+    1- classification
+        assign input and assign to a class/category
+        models find features in the data that correlate to a class and create a mapping function
+        model uses mapping function to classify unseen data
+
+        1-Linear classifers
+        2-SVM
+        3-K-nearest neighbour
+        4-random forest
+
+    2- regression
+        Model attempts to find relationship between dependant and independent variables
+            to predict continuous values such as Test scores, sales
+
+        1-liner regression
+        2-lasso regression
+        3- multivariate regression
+
+    Bioinformatics
+    Object recognition
+    speech recognition
+    spam detection
+
+Unsupervised Learning :
+    used in exploratory data analysis ?
+    finds patterns that may not be noticeable by humans
+    1- Clustering
+        precess of grouping data in different clusters or groups : to predict continuous valeurs
+
+        1- Partition clustering
+
+        2- Hierarchical clustering
+
+    2-Association
+        attempts to find relationships between different entities
+
+        examples : airbnb, amazon, credit card fraud detection
+Reinforcement learning
+    agent learns in interactive environment by trail and error based on feedback from its own actions and experiences
+    uses rewards and punishments (+ or - behaviour)
+    maximize the total cumulative rewards
+
+    examples : robotics, business strategy planning, traffic light control, web system configuration
+
+Regularization
+
+    Deep learning model should perform well on training data and new test data : Overfitting (common problem)
+        performs too well in training data but not on test data
+
+    Underfitting :
+        underestimates the data
+
+    Overfitting:
+        too perfect for the training data
+        therefore cant predict test data accurately
+
+    Tacking Overfitting :
+        1- Dropout
+            randomly removes some nodes and their connections
+            captures more randomness
+        2- Dataset augmentation
+            more data = better model
+            fake data
+                apply transformation on existing dataset to get synthesize more data
+        3- Early Stopping
+            training error decrease steadily, validation error increases after a certain point
+
+Neural Network architectures:
+
+Fully-connected feed forward neural network
+    each neuron is connected to every subsequent layer with no backward connections (no cycle or loops0
+
+
+RNN
+- speech recognition
+
+Convolutional NNs
+
+    Pooling :
+        reduces number of neurons necessary in subsequent layers
+    max :
+    pick up max value of region
+    min:
+    opposite
+
+Creating a Deep Learning Model
+
+1- Gathering data
+    picking the right data is key
+    make assumptions about the data and record them
+
+    Size : amount of data = 10x # of parameters
+
+        regression : minimum : 10 examples per prediction variable
+        image classification: minimum : 1000 images per class
+
+    Quality :
+        labelling errors
+        features noisy
+
+    SITES THAT HAVE GOOD DATASETS :
+        1- archives.ics.uci.edu (UCI machine learning repository)
+        2- Kaggle : kaggle.com/datasets
+        3- datasetsearch.research.google.com (google dataset search)
+        4- reddit : reddit.com
+
+2- Preprocessing the Data
+
+    splitting dataset into subsets
+        Train on training data
+        Evaluate on validation data
+        Test it on testing data
+    cant randomly split : make sure the testing data is similar to the training data
+
+    number of samples in the data
+    model being trained
+
+    few hyperparameters = small validation set
+    many hyperparameters = large validation set
+
+Cross validation
+
+    b) formatting
+    c) missing data
+        nan or null
+        algorithm normally cant deal with missing data, so must do something about them beforehand
+
+        1) eliminating features with missing values
+        2) imputing the missing values - set as the mean values
+    d) sampling
+        small sample of the dataset
+    e) Features scaling
+
+        1) normalization
+        2) standardization
+
+3- Training the model
+
+    1) Feed data
+    2) Forward propagation
+    3) Loss function
+    4) backpropagation
+
+4- Evaluation
+
+    Test the model on the validation set
+    meant to be representative of how good the model might perform in the real world
+
+5- Optimizing
+
+    a) hyperparameter tuning
+        increase number of epochs
+        adjust learning rate
+
+        initial conditions play a large role in determining your models outcome
+
+    b) Addressing Overfitting
+        getting more data (generalize better)
+        reducing model size (be careful not to underfit the model)
+        regularization : weights have smaller value which regularize the weights of all values
+            done by adding to the loss function of the network
+            L1 regularization
+            L2 regularizaztion (squared value)
+    c) Data augmentation
+        increasing dataset artificially
+        flipping, blurring, zooming
+    d) Dropout
+        randomly drops out some neurons
+        reduce co-dependency of neurons
