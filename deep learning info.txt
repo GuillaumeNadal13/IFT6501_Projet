@@ -215,3 +215,101 @@ Neural Network architectures:
 
 Fully-connected feed forward neural network
     each neuron is connected to every subsequent layer with no backward connections (no cycle or loops0
+
+
+RNN
+- speech recognition
+
+Convolutional NNs
+
+    Pooling :
+        reduces number of neurons necessary in subsequent layers
+    max :
+    pick up max value of region
+    min:
+    opposite
+
+Creating a Deep Learning Model
+
+1- Gathering data
+    picking the right data is key
+    make assumptions about the data and record them
+
+    Size : amount of data = 10x # of parameters
+
+        regression : minimum : 10 examples per prediction variable
+        image classification: minimum : 1000 images per class
+
+    Quality :
+        labelling errors
+        features noisy
+
+    SITES THAT HAVE GOOD DATASETS :
+        1- archives.ics.uci.edu (UCI machine learning repository)
+        2- Kaggle : kaggle.com/datasets
+        3- datasetsearch.research.google.com (google dataset search)
+        4- reddit : reddit.com
+
+2- Preprocessing the Data
+
+    splitting dataset into subsets
+        Train on training data
+        Evaluate on validation data
+        Test it on testing data
+    cant randomly split : make sure the testing data is similar to the training data
+
+    number of samples in the data
+    model being trained
+
+    few hyperparameters = small validation set
+    many hyperparameters = large validation set
+
+Cross validation
+
+    b) formatting
+    c) missing data
+        nan or null
+        algorithm normally cant deal with missing data, so must do something about them beforehand
+
+        1) eliminating features with missing values
+        2) imputing the missing values - set as the mean values
+    d) sampling
+        small sample of the dataset
+    e) Features scaling
+
+        1) normalization
+        2) standardization
+
+3- Training the model
+
+    1) Feed data
+    2) Forward propagation
+    3) Loss function
+    4) backpropagation
+
+4- Evaluation
+
+    Test the model on the validation set
+    meant to be representative of how good the model might perform in the real world
+
+5- Optimizing
+
+    a) hyperparameter tuning
+        increase number of epochs
+        adjust learning rate
+
+        initial conditions play a large role in determining your models outcome
+
+    b) Addressing Overfitting
+        getting more data (generalize better)
+        reducing model size (be careful not to underfit the model)
+        regularization : weights have smaller value which regularize the weights of all values
+            done by adding to the loss function of the network
+            L1 regularization
+            L2 regularizaztion (squared value)
+    c) Data augmentation
+        increasing dataset artificially
+        flipping, blurring, zooming
+    d) Dropout
+        randomly drops out some neurons
+        reduce co-dependency of neurons
