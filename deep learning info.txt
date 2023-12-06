@@ -185,3 +185,30 @@ Reinforcement learning
     agent learns in interactive environment by trail and error based on feedback from its own actions and experiences
     uses rewards and punishments (+ or - behaviour)
     maximize the total cumulative rewards
+
+    examples : robotics, business strategy planning, traffic light control, web system configuration
+
+Regularization
+
+    Deep learning model should perform well on training data and new test data : Overfitting (common problem)
+        performs too well in training data but not on test data
+
+    Underfitting :
+        underestimates the data
+
+    Overfitting:
+        too perfect for the training data
+        therefore cant predict test data accurately
+
+    Tacking Overfitting :
+        1- Dropout
+            randomly removes some nodes and their connections
+            captures more randomness
+        2- Dataset augmentation
+            more data = better model
+            fake data
+                apply transformation on existing dataset to get synthesize more data
+        3- Early Stopping
+            training error decrease steadily, validation error increases after a certain point
+
+Neural Network architectures:
