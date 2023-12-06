@@ -212,3 +212,6 @@ Regularization
             training error decrease steadily, validation error increases after a certain point
 
 Neural Network architectures:
+
+Fully-connected feed forward neural network
+    each neuron is connected to every subsequent layer with no backward connections (no cycle or loops0
